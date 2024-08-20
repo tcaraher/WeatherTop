@@ -1,0 +1,18 @@
+<form class="box" action="/station/{{station._id}}/addreport" method="POST">
+  <label>Enter Report Details:</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+<!--        TODO all input fileds to be changed, and in model...-->
+        <input class="input" type="text" placeholder="Report Code" name="title">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Artist" name="artist">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter duration" name="duration">
+      </div>
+    </div>
+  </div>
+  <button class="button is-primary">Add Report</button>
+</form>
