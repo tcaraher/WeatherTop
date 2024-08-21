@@ -18,7 +18,36 @@
       <div class="field">
         <label class="label">Wind Direction deg</label>
         <input class="input" type="text" placeholder="00 deg" name="winddirection">
+        <div class='dropdown is-hoverable'>
+          <div class='dropdown-trigger'>
+            <button class='dropdown-button' aria-haspopup='true' aria-controls='dropdown-menu3'>
+              <span id='selected-wind-direction'>0</span>
+              <span class='icon is-small'>
+              <i class='fas fa-angle-down' aria-hidden='true'></i>
+            </span>
+            </button>
+          </div>
+          <div class='dropdown-menu' id='dropdown-menu3' role='menu'>
+            <div style="max-height: 10rem; overflow: auto" class='dropdown-content'>
+              <a href="#" class="dropdown-item"> 0 </a>
+              <a href="#" class="dropdown-item"> 20 </a>
+              <a href="#" class="dropdown-item"> 40 </a>
+              <a href="#" class="dropdown-item"> 60 </a>
+              <a href="#" class="dropdown-item"> 80 </a>
+              <a href="#" class="dropdown-item"> 100 </a>
+              <a href="#" class="dropdown-item"> 120 </a>
+              <a href="#" class="dropdown-item"> 140 </a>
+              <a href="#" class="dropdown-item"> 160 </a>
+              <a href="#" class="dropdown-item"> 180 </a>
+              <a href="#" class="dropdown-item"> 200 </a>
+              <a href="#" class="dropdown-item"> 220 </a>
+              <a href="#" class="dropdown-item"> 240 </a>
+              <a href="#" class="dropdown-item"> 260 </a>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="field">
         <label class="label">Pressure hpa</label>
         <input class="input" type="text" placeholder="00 hpa" name="pressure">

@@ -1,0 +1,11 @@
+{
+  // IMPORTANT PART BELLOW
+  "overrides": [
+    {
+      "files": "**/*.hbs",
+      "options": {
+        "parser": "glimmer"
+      }
+    }
+  ]
+}
