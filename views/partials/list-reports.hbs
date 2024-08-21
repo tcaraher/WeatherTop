@@ -1,17 +1,56 @@
+<div class="fixed-grid has-5-cols min-height-2">
+  <div class="grid">
+    <div style="height:100%" class="cell box">
+
+      <div style="display: flex">
+        <h2 class="title is-4">
+        {{station.station}}
+      </h2>
+        <i class="fa-solid fa-location-dot"></i></div>
+      <p>Latitude:</p>
+      <p>{{station.latitude}}</p>
+      <p>Longitude:</p>
+      <p>      {{station.longitude}}
+      </p>
+    </div>
+    <div style="height:100%" class="cell box">
+      <h2 class="title is-4">Weather</h2>
+      <p>      {{station.reports.0.weathercode}}
+      </p></div>
+    <div style="height:100%" class="cell box">
+      <h2 class="title is-4">Temp</h2>
+      <p>      {{station.reports.0.temperature}}°C
+      </p></div>
+    <div style="height:100%" class="cell box">
+      <h2 class="title is-4">Wind</h2>
+      <p>Wind Direction:</p>
+      <p>      {{station.reports.0.winddirection}}°
+      </p>
+      <p>Wind Speed:</p>
+      <p>      {{station.reports.0.windspeed}}bft
+      </p></div>
+    <div style="height:100%" class="cell box">
+      <h2 class="title is-4">Pressure</h2>
+      <p>  {{station.reports.0.pressure}}hba
+      </p></div>
+  </div>
+</div>
+
+
 <table class="table is-fullwidth">
   <thead>
-    <tr>
-      <th>Code</th>
-      <th>Temp</th>
-      <th>Wind Speed</th>
-      <th>Wind Direction</th>
-      <th>Pressure</th>
-      <th></th>
-      <th></th>
-    </tr>
+  <tr>
+    <th>Code</th>
+    <th>Temp</th>
+    <th>Wind Speed</th>
+    <th>Wind Direction</th>
+    <th>Pressure</th>
+    <th></th>
+    <th></th>
+  </tr>
   </thead>
   <tbody>
-    {{#each station.reports}}
+  {{#each station.reports}}
     <tr>
       <td>
         {{weathercode}}
@@ -39,6 +78,6 @@
         </a>
       </td>
     </tr>
-    {{/each}}
+  {{/each}}
   </tbody>
 </table>
