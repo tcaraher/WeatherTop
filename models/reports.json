@@ -1,0 +1,14 @@
+{
+  "file": "./models/reports.json",
+  "reports": [
+    {
+      "weathercode": "34",
+      "temperature": 20,
+      "windspeed": 5,
+      "winddirection": 120,
+      "pressure": 22,
+      "_id": "4597ed1c-ab0e-4b6f-aa22-a13d2b96888f",
+      "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
+    }
+  ]
+}

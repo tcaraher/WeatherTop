@@ -42,8 +42,8 @@ export const reportStore = {
 
   async updateReport(reportId, updatedReport) {
     const report = await this.getReportById(reportId);
-    report.title = updatedReport.title;
-    report.artist = updatedReport.artist;
+    report.weathercode = updatedReport.weathercode;
+    report.temperature = updatedReport.temperature;
     report.duration = updatedReport.duration;
     await db.write();
   },

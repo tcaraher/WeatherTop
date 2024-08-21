@@ -1,16 +1,27 @@
 <form class="box" action="/station/{{station._id}}/addreport" method="POST">
-  <label>Enter Report Details:</label>
+  <label class="title">Enter Report Details:</label>
+  <hr/>
   <div class="field is-horizontal">
     <div class="field-body">
       <div class="field">
-<!--        TODO all input fileds to be changed, and in model...-->
-        <input class="input" type="text" placeholder="Report Code" name="title">
+        <label class="label">Code</label>
+        <input class="input" type="text" placeholder="00" name="weathercode">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Artist" name="artist">
+        <label class="label">Temp °C</label>
+        <input class="input" type="text" placeholder="00 °C" name="temperature">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Enter duration" name="duration">
+        <label class="label">Wind Speed bft</label>
+        <input class="input" type="text" placeholder="00 bft" name="windspeed">
+      </div>
+      <div class="field">
+        <label class="label">Wind Direction deg</label>
+        <input class="input" type="text" placeholder="00 deg" name="winddirection">
+      </div>
+      <div class="field">
+        <label class="label">Pressure hpa</label>
+        <input class="input" type="text" placeholder="00 hpa" name="pressure">
       </div>
     </div>
   </div>

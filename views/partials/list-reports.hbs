@@ -1,9 +1,11 @@
 <table class="table is-fullwidth">
   <thead>
     <tr>
-      <th>Track</th>
-      <th>Artist</th>
-      <th>Duration</th>
+      <th>Code</th>
+      <th>Temp</th>
+      <th>Wind Speed</th>
+      <th>Wind Direction</th>
+      <th>Pressure</th>
       <th></th>
       <th></th>
     </tr>
@@ -12,13 +14,19 @@
     {{#each station.reports}}
     <tr>
       <td>
-        {{title}}
+        {{weathercode}}
       </td>
       <td>
-        {{artist}}
+        {{temperature}}°C
       </td>
       <td>
-        {{duration}}
+        {{windspeed}}bft
+      </td>
+      <td>
+        {{winddirection}}°
+      </td>
+      <td>
+        {{pressure}}hpa
       </td>
       <td>
         <a href="/station/{{../station._id}}/deletereport/{{_id}}" class="button">

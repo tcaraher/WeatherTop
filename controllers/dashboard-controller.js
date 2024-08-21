@@ -15,7 +15,9 @@ export const dashboardController = {
   async addStation(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const newStation = {
-      title: request.body.title,
+      station: request.body.station,
+      longitude: request.body.longitude,
+      latitude: request.body.latitude,
       userid: loggedInUser._id,
     };
     console.log(`adding Station ${newStation.title}`);

@@ -1,0 +1,12 @@
+{
+  "file": "./models/stations.json",
+  "stations": [
+    {
+      "station": "Tralee",
+      "longitude": "23.23",
+      "latitude": "34.34",
+      "userid": "da186f59-3cb7-4afe-b6f9-6ab7421215ee",
+      "_id": "e0f59799-cbff-48b8-8b07-db25431c98b8"
+    }
+  ]
+}

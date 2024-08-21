@@ -18,10 +18,12 @@ export const reportController = {
     const stationId = request.params.stationid;
     const reportId = request.params.reportid;
     const updatedReport = {
-      title: request.body.title,
-      artist: request.body.artist,
-      duration: Number(request.body.duration),
-    };
+      weathercode: request.body.weathercode,
+      temperature: request.body.temperature,
+      windspeed: Number(request.body.windspeed),
+      winddirection: request.body.winddirection,
+      pressure: request.body.pressure,
+    }
     console.log(`Updating report ${reportId} from Station ${stationId}`);
     await reportStore.updateReport(reportId, updatedReport);
     response.redirect("/station/" + stationId);

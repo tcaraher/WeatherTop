@@ -1,17 +1,29 @@
 <form class="box" action="/station/{{station._id}}/updatereport/{{report._id}}" method="POST">
-  <label>Track Details:</label>
+  <label class="title">Report Details:</label>
+  <hr/>
   <div class="field is-horizontal">
     <div class="field-body">
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Title" name="title" value="{{track.title}}">
+        <label class="label">Code</label>
+        <input class="input" type="text" placeholder="{{report.weathercode}}" name="weathercode" value="{{report.weathercode}}">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Enter Artist" name="artist" value="{{track.artist}}">
+        <label class="label">Temp °C</label>
+        <input class="input" type="text" placeholder="{{report.temperature}}" name="temperature" value="{{report.temperature}}">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Enter duration" name="duration" value="{{track.duration}}">
+        <label class="label">Wind Speed bft</label>
+        <input class="input" type="text" placeholder="{{report.windspeed}}" name="windspeed" value="{{report.windspeed}}">
+      </div>
+      <div class="field">
+        <label class="label">Wind Direction deg</label>
+        <input class="input" type="text" placeholder="{{report.winddirection}}" name="winddirection" value="{{report.winddirection}}">
+      </div>
+      <div class="field">
+        <label class="label">Pressure hpa</label>
+        <input class="input" type="text" placeholder="{{report.pressure}}" name="pressure" value="{{report.pressure}}">
       </div>
     </div>
   </div>
-  <button class="button is-primary">Update Track</button>
+  <button class="button is-primary">Update Report</button>
 </form>
