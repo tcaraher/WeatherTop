@@ -1,5 +1,6 @@
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
+import {weatherCodeMapping} from "../utils/weather-code-mapping.js";
 
 export const stationController = {
   async index(request, response) {
@@ -7,6 +8,7 @@ export const stationController = {
     const viewData = {
       title: "Stations",
       station: station,
+
     };
     response.render("station-view", viewData);
   },
@@ -15,6 +17,8 @@ export const stationController = {
     const station = await stationStore.getStationById(request.params.id);
     const newReport = {
       weathercode: request.body.weathercode,
+      weathercodedesc: weatherCodeMapping.getWeatherCodeDesc(request.body.weathercode),
+      weathercodeimgurl: weatherCodeMapping.getWeatherCodeImg(request.body.weathercode),
       temperature: Number(request.body.temperature),
       windspeed: Number(request.body.windspeed),
       winddirection: Number(request.body.winddirection),

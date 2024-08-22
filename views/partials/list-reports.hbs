@@ -20,10 +20,13 @@
     <div style="height:100%" class="cell box">
       <div  style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
         <h2 class="title is-5">Weather</h2>
-        <img style="max-width: 4rem" src="https://openweathermap.org/img/wn/10d@2x.png" />
+        <img style="max-width: 4rem" src={{station.reports.0.weathercodeimgurl}} />
       </div>
       <p>
-        {{station.reports.0.weathercode}}
+        {{station.reports.0.weathercodedesc}}
+      </p>
+      <p>
+        Code: {{station.reports.0.weathercode}}
       </p>
     </div>
     <div style="height:100%" class="cell box">

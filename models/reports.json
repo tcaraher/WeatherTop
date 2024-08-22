@@ -2,21 +2,36 @@
   "file": "./models/reports.json",
   "reports": [
     {
-      "weathercode": "34",
-      "temperature": 20,
-      "windspeed": 5,
-      "winddirection": 120,
-      "pressure": 22,
-      "_id": "4597ed1c-ab0e-4b6f-aa22-a13d2b96888f",
+      "weathercode": "800",
+      "weathercodedesc": "clear sky",
+      "weathercodeimgurl": "https://openweathermap.org/img/wn/01d@2x.png",
+      "temperature": 3,
+      "windspeed": 4,
+      "winddirection": 90,
+      "pressure": 1,
+      "_id": "6233d50d-a841-4c70-90c6-c402dc36d4bc",
       "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
     },
     {
-      "weathercode": "255",
-      "temperature": 45,
-      "windspeed": 33,
-      "winddirection": 315,
-      "pressure": 44,
-      "_id": "9418e228-d7a8-4249-8d46-788afc7e6345",
+      "weathercode": "802",
+      "weathercodedesc": "scattered clouds",
+      "weathercodeimgurl": "https://openweathermap.org/img/wn/03d@2x.png",
+      "temperature": 15,
+      "windspeed": 4,
+      "winddirection": 90,
+      "pressure": 333,
+      "_id": "35a36223-d206-4e76-ab47-7180231b0747",
+      "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
+    },
+    {
+      "weathercode": "804",
+      "weathercodedesc": "overcast clouds",
+      "weathercodeimgurl": "https://openweathermap.org/img/wn/04d@2x.png",
+      "temperature": 17,
+      "windspeed": 2,
+      "winddirection": 45,
+      "pressure": 33,
+      "_id": "b6114180-0e87-4b56-83e9-93f99aca3c39",
       "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
     }
   ]

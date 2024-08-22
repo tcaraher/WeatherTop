@@ -13,7 +13,8 @@ export const reportStore = {
     await db.read();
     report._id = v4();
     report.stationid = stationId;
-    db.data.reports.push(report);
+    // Pushes to beginning of array so older reports get pushed back
+    db.data.reports.unshift(report);
     await db.write();
     return report;
   },
