@@ -11,39 +11,12 @@
       "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
     },
     {
-      "weathercode": "",
-      "temperature": 0,
-      "windspeed": 0,
-      "winddirection": 0,
-      "pressure": 0,
-      "_id": "b9905c5e-cd02-4b54-b426-74c687b258b9",
-      "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
-    },
-    {
-      "weathercode": "",
-      "temperature": 0,
-      "windspeed": 0,
-      "winddirection": 0,
-      "pressure": 0,
-      "_id": "cf05c202-ef6f-4b44-b9b5-d82ab213ee95",
-      "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
-    },
-    {
-      "weathercode": "",
-      "temperature": 0,
-      "windspeed": 0,
-      "winddirection": 0,
-      "pressure": 0,
-      "_id": "e35e0488-9033-4174-a966-22b9f50a7acd",
-      "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
-    },
-    {
-      "weathercode": "",
-      "temperature": 0,
-      "windspeed": 0,
-      "winddirection": 0,
-      "pressure": 0,
-      "_id": "cdad8023-f24e-45de-9d01-ce28dd290b2b",
+      "weathercode": "255",
+      "temperature": 45,
+      "windspeed": 33,
+      "winddirection": 315,
+      "pressure": 44,
+      "_id": "9418e228-d7a8-4249-8d46-788afc7e6345",
       "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
     }
   ]
