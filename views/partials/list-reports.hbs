@@ -37,6 +37,12 @@
       <p>
         {{station.reports.0.temperature}}°C
       </p>
+      <p>
+        Max Temp: {{maxTemp}}°C
+      </p>
+      <p>
+        Min Temp: {{minTemp}}°C
+      </p>
     </div>
     <div style="height:100%" class="cell box">
       <div style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
@@ -49,6 +55,12 @@
       <p>Wind Speed:</p>
       <p> {{station.reports.0.windspeed}}bft
       </p>
+      <p>
+        Max: {{maxWindSpeed}}bft
+      </p>
+      <p>
+        Min: {{minWindSpeed}}bft
+      </p>
     </div>
     <div  style="height:100%" class="cell box">
       <div style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
@@ -56,6 +68,12 @@
         <i style="min-width: 3rem; font-size: 2rem" class="fa-solid fa-weight-hanging"></i>
       </div>
       <p> {{station.reports.0.pressure}}hba
+      </p>
+      <p>
+        Max: {{maxPressure}}hba
+      </p>
+      <p>
+        Min: {{minPressure}}hba
       </p>
     </div>
   </div>
