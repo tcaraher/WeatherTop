@@ -10,7 +10,6 @@ export const reportController = {
       title: "Edit Song",
       station: await stationStore.getStationById(stationId),
       report: await reportStore.getReportById(reportId),
-      // mostRecentReport: await
     };
     response.render("report-view", viewData);
   },

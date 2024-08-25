@@ -1,4 +1,4 @@
-export const utils = {
+export const reportAnalytics = {
   getMax(valueName = "", reports) {
     let reportWithMaxValue = null;
     if (reports.length > 0) {
@@ -23,5 +23,6 @@ export const utils = {
     }
     return reportWithMinValue[valueName];
   },
+
 }
 

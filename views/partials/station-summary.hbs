@@ -1,0 +1,80 @@
+<div class="fixed-grid has-5-cols min-height-2">
+  <div class="grid">
+    <div style="height:100%" class="cell box">
+      <div style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
+        <h2 style="margin: auto" class="title is-5">
+          {{station}}
+        </h2>
+        <!--        TODO extract all inline styles to CSS-->
+        <i style="min-width: 3rem; font-size: 2rem" class="fa-solid fa-location-dot"></i>
+      </div>
+      <p>Latitude:</p>
+      <p>
+        {{latitude}}
+      </p>
+      <p>Longitude:</p>
+      <p>
+        {{longitude}}
+      </p>
+    </div>
+    <div style="height:100%" class="cell box">
+      <div  style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
+        <h2 class="title is-5">Weather</h2>
+        <img style="max-width: 4rem" src={{recentReport.weathercodeimgurl}} />
+      </div>
+      <p>
+        {{recentReport.weathercodedesc}}
+      </p>
+      <p>
+        Code: {{recentReport.weathercode}}
+      </p>
+    </div>
+    <div style="height:100%" class="cell box">
+      <div style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
+        <h2 style="margin: auto" class="title is-5">Temp</h2>
+        <i style="min-width: 3rem; font-size: 2rem" class="fa-solid fa-temperature-three-quarters"></i>
+      </div>
+      <p>
+        {{recentReport.temperature}}°C
+      </p>
+      <p>
+        Max Temp: {{reportAnalytics.maxTemp}}°C
+      </p>
+      <p>
+        Min Temp: {{reportAnalytics.minTemp}}°C
+      </p>
+    </div>
+    <div style="height:100%" class="cell box">
+      <div style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
+        <h2 style="margin: auto" class="title is-5">Wind</h2>
+        <i style="min-width: 3rem; font-size: 2rem" class="fa-solid fa-wind"></i>
+      </div>
+      <p>Wind Direction:</p>
+      <p> {{recentReport.winddirection}}°
+      </p>
+      <p>Wind Speed:</p>
+      <p> {{recentReport.windspeed}}bft
+      </p>
+      <p>
+        Max: {{reportAnalytics.maxWindSpeed}}bft
+      </p>
+      <p>
+        Min: {{reportAnalytics.minWindSpeed}}bft
+      </p>
+    </div>
+    <div  style="height:100%" class="cell box">
+      <div style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
+        <h2 style="margin: auto" class="title is-5">Pressure</h2>
+        <i style="min-width: 3rem; font-size: 2rem" class="fa-solid fa-weight-hanging"></i>
+      </div>
+      <p> {{recentReport.pressure}}hba
+      </p>
+      <p>
+        Max: {{reportAnalytics.maxPressure}}hba
+      </p>
+      <p>
+        Min: {{reportAnalytics.minPressure}}hba
+      </p>
+    </div>
+  </div>
+</div>

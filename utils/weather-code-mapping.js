@@ -367,7 +367,9 @@ const weatherCodeData = {
 
   export const weatherCodeMapping = {
     getWeatherCodeDesc(weatherCode) {
-      return weatherCodeData[weatherCode].label
+      if (weatherCodeData[weatherCode]) {
+        return weatherCodeData[weatherCode].label
+      } else return null
     },
 
     getWeatherCodeImg(weatherCode){

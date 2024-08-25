@@ -1,20 +1,11 @@
 {{#each stations}}
-<div class="box box-link-hover-shadow">
-  <h2 class="title">
-    {{station}}
-  </h2>
-  <p>
-    {{longitude}}
-  </p>
-  <p>
-    {{latitude}}
-  </p>
-  <a href="/station/{{_id}}" class="button">
-    {{>icons/open}}
-  </a>
-  <a href="/dashboard/deletestation/{{_id}}" class="button">
-    {{>icons/delete}}
-  </a>
-</div>
-
+  <div class="box box-link-hover-shadow">
+    {{>station-summary}}
+    <a href="/station/{{_id}}" class="button">
+      {{>icons/open}}
+    </a>
+    <a href="/dashboard/deletestation/{{_id}}" class="button">
+      {{>icons/delete}}
+    </a>
+  </div>
 {{/each}}

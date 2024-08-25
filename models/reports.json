@@ -2,36 +2,69 @@
   "file": "./models/reports.json",
   "reports": [
     {
+      "weathercode": "801",
+      "weathercodedesc": "few clouds",
+      "weathercodeimgurl": "https://openweathermap.org/img/wn/02d@2x.png",
+      "temperature": 20,
+      "windspeed": 1,
+      "winddirection": 135,
+      "pressure": 2000,
+      "_id": "aa6001a2-ca9b-41dd-b797-cc73cb0785ca",
+      "stationid": "0fa8be19-49eb-4323-b973-ca0b2f6f5a7d"
+    },
+    {
       "weathercode": "800",
       "weathercodedesc": "clear sky",
       "weathercodeimgurl": "https://openweathermap.org/img/wn/01d@2x.png",
-      "temperature": 3,
-      "windspeed": 4,
+      "temperature": 25,
+      "windspeed": 2,
       "winddirection": 90,
-      "pressure": 1,
-      "_id": "6233d50d-a841-4c70-90c6-c402dc36d4bc",
-      "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
+      "pressure": 1000,
+      "_id": "a8f0c2c1-0af5-4829-9faf-2e68a425bf33",
+      "stationid": "0fa8be19-49eb-4323-b973-ca0b2f6f5a7d"
     },
     {
-      "weathercode": "802",
-      "weathercodedesc": "scattered clouds",
-      "weathercodeimgurl": "https://openweathermap.org/img/wn/03d@2x.png",
-      "temperature": 15,
-      "windspeed": 4,
-      "winddirection": 90,
-      "pressure": 333,
-      "_id": "35a36223-d206-4e76-ab47-7180231b0747",
+      "weathercode": "800",
+      "weathercodedesc": "clear sky",
+      "weathercodeimgurl": "https://openweathermap.org/img/wn/01d@2x.png",
+      "temperature": 22,
+      "windspeed": 2,
+      "winddirection": 135,
+      "pressure": 1345,
+      "_id": "6137b198-e5c3-4a86-805a-08cbc0e4fb8b",
       "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
     },
     {
       "weathercode": "804",
       "weathercodedesc": "overcast clouds",
       "weathercodeimgurl": "https://openweathermap.org/img/wn/04d@2x.png",
-      "temperature": 17,
-      "windspeed": 2,
+      "temperature": 24,
+      "windspeed": 32,
       "winddirection": 45,
-      "pressure": 33,
-      "_id": "b6114180-0e87-4b56-83e9-93f99aca3c39",
+      "pressure": 111,
+      "_id": "c2ff24ab-c3ff-4c50-8a21-30b6138f033d",
+      "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
+    },
+    {
+      "weathercode": "801",
+      "weathercodedesc": "few clouds",
+      "weathercodeimgurl": "https://openweathermap.org/img/wn/02d@2x.png",
+      "temperature": 13,
+      "windspeed": 12,
+      "winddirection": 90,
+      "pressure": 656,
+      "_id": "5891c7cc-6f84-424c-a6e8-7aa3188ec0e3",
+      "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
+    },
+    {
+      "weathercode": "202",
+      "weathercodedesc": "thunderstorm with heavy rain",
+      "weathercodeimgurl": "https://openweathermap.org/img/wn/11d@2x.png",
+      "temperature": 6,
+      "windspeed": 2,
+      "winddirection": 180,
+      "pressure": 2234,
+      "_id": "8facfc26-6a91-4094-bd4b-c6d534d27473",
       "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
     }
   ]

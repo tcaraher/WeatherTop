@@ -1,26 +1,27 @@
 import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import {weatherCodeMapping} from "../utils/weather-code-mapping.js";
-import { utils } from "../utils/utils.js";
+import { reportAnalytics } from "../utils/reportAnalytics.js";
 
 export const stationController = {
   async index(request, response) {
     const station = await stationStore.getStationById(request.params.id);
-    const maxTemp = utils.getMax("temperature", station.reports)
-    const minTemp = utils.getMin("temperature", station.reports)
-    const maxWindSpeed = utils.getMax("windspeed", station.reports)
-    const minWindSpeed = utils.getMin("windspeed", station.reports)
-    const maxPressure = utils.getMax("pressure", station.reports)
-    const minPressure = utils.getMin("pressure", station.reports)
+
+    station.recentReport = station.reports[0];
+    if (station.reports.length > 0) {
+      station.reportAnalytics = {
+        maxTemp: reportAnalytics.getMax("temperature", station.reports),
+        minTemp: reportAnalytics.getMin("temperature", station.reports),
+        maxWindSpeed: reportAnalytics.getMax("windspeed", station.reports),
+        minWindSpeed: reportAnalytics.getMin("windspeed", station.reports),
+        maxPressure: reportAnalytics.getMax("pressure", station.reports),
+        minPressure: reportAnalytics.getMin("pressure", station.reports),
+      };
+    }
+
     const viewData = {
       title: "Stations",
       station: station,
-      maxTemp: maxTemp,
-      minTemp: minTemp,
-      maxWindSpeed: maxWindSpeed,
-      minWindSpeed: minWindSpeed,
-      maxPressure: maxPressure,
-      minPressure: minPressure,
     };
     response.render("station-view", viewData);
   },
@@ -45,7 +46,7 @@ export const stationController = {
     const stationId = request.params.stationid;
     const reportId = request.params.reportid;
     console.log(`Deleting Report ${reportId} from Station ${stationId}`);
-    await reportStore.deleteReport(request.params.reportId);
+    await reportStore.deleteReport(request.params.reportid);
     response.redirect("/station/" + stationId);
   },
 };

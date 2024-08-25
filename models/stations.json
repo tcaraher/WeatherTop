@@ -7,6 +7,20 @@
       "latitude": "34.34",
       "userid": "da186f59-3cb7-4afe-b6f9-6ab7421215ee",
       "_id": "e0f59799-cbff-48b8-8b07-db25431c98b8"
+    },
+    {
+      "station": "Dumore",
+      "longitude": "33.44",
+      "latitude": "11.22",
+      "userid": "da186f59-3cb7-4afe-b6f9-6ab7421215ee",
+      "_id": "0fa8be19-49eb-4323-b973-ca0b2f6f5a7d"
+    },
+    {
+      "station": "Dublin",
+      "longitude": "41.41",
+      "latitude": "30.32",
+      "userid": "da186f59-3cb7-4afe-b6f9-6ab7421215ee",
+      "_id": "c0ebfab9-684d-451c-abdd-8e38d0236c4e"
     }
   ]
 }

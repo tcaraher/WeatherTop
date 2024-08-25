@@ -7,6 +7,9 @@
 <!--  <div class="subtitle">-->
 <!--    Shortest Track: {{shortestTrack.title}}-->
 <!--  </div>-->
+  {{#with station}}
+  {{>station-summary}}
+  {{/with}}
   {{> list-reports}}
   {{> add-report}}
 </section>
