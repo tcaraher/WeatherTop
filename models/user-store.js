@@ -28,7 +28,7 @@ export const userStore = {
     if (updatedProfile.email !== "") {
       loggedInUser.email = updatedProfile.email;
     }
-    if (updatedProfile.password != "") {
+    if (updatedProfile.password !== "") {
       loggedInUser.passwod = updatedProfile.password
     }
     await db.write();

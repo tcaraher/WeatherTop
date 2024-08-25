@@ -2,6 +2,30 @@
   "file": "./models/reports.json",
   "reports": [
     {
+      "timestamp": "2024-08-26 00:35:55",
+      "weathercode": 802,
+      "weathercodedesc": "scattered clouds",
+      "weathercodeimgurl": "https://openweathermap.org/img/wn/03d@2x.png",
+      "temperature": 25.05,
+      "winddirection": 217,
+      "windspeed": 12.56,
+      "pressure": 1008,
+      "_id": "0614fc17-0e26-43ee-baf8-1573681531b6",
+      "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
+    },
+    {
+      "timestamp": "2024-08-26 00:35:35",
+      "weathercode": 804,
+      "weathercodedesc": "overcast clouds",
+      "weathercodeimgurl": "https://openweathermap.org/img/wn/04d@2x.png",
+      "temperature": 25.05,
+      "winddirection": 221,
+      "windspeed": 9.09,
+      "pressure": 1011,
+      "_id": "7c7316cd-9c4a-4309-8b68-59c40e050524",
+      "stationid": "c0ebfab9-684d-451c-abdd-8e38d0236c4e"
+    },
+    {
       "timestamp": "2024-08-26 00:00:15",
       "weathercode": "502",
       "weathercodedesc": "heavy intensity rain",
