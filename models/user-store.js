@@ -1,5 +1,6 @@
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
+import { request } from "express";
 
 const db = initStore("users");
 
@@ -15,6 +16,22 @@ export const userStore = {
     db.data.users.push(user);
     await db.write();
     return user;
+  },
+
+  async updateUser(loggedInUser, updatedProfile) {
+    if (updatedProfile.firstName !== "") {
+      loggedInUser.firstName = updatedProfile.firstName;
+    }
+    if (updatedProfile.lastName !== "") {
+      loggedInUser.lastName = updatedProfile.lastName;
+    }
+    if (updatedProfile.email !== "") {
+      loggedInUser.email = updatedProfile.email;
+    }
+    if (updatedProfile.password != "") {
+      loggedInUser.passwod = updatedProfile.password
+    }
+    await db.write();
   },
 
   async getUserById(id) {

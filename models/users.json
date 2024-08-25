@@ -2,9 +2,9 @@
   "file": "./models/users.json",
   "users": [
     {
-      "firstName": "Test",
-      "lastName": "User",
-      "email": "test@test.com",
+      "firstName": "John",
+      "lastName": "McDoe",
+      "email": "johndoe@gmail.com",
       "password": "sdf",
       "_id": "da186f59-3cb7-4afe-b6f9-6ab7421215ee"
     }

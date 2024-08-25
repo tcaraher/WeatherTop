@@ -45,7 +45,6 @@ export const reportStore = {
     const report = await this.getReportById(reportId);
     report.weathercode = updatedReport.weathercode;
     report.temperature = updatedReport.temperature;
-    report.duration = updatedReport.duration;
     await db.write();
   },
 };

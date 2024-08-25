@@ -1,0 +1,35 @@
+<!--<section class="section">-->
+<!--  <h1 class="title">{{title}}</h1>-->
+<!--  <div class="box">-->
+<!--    <h2 class="subtitle">First Name:</h2>-->
+<!--    <p class="subtitle">{{loggedInUser.firstName}}</p>-->
+<!--    {{>icons/edit}}-->
+<!--  </div>-->
+
+{{> menu active="user-profile"}}
+<h1 class="title">{{title}}</h1>
+<h2 class="subtitle">View or update your profile</h2>
+<form action="/update-user-profile" method="POST">
+  <label class="label">Name</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <input class="input" type="text" placeholder="{{loggedInUser.firstName}}" name="firstName">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="{{loggedInUser.lastName}}" name="lastName">
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Email</label> <input class="input" type="text" placeholder="{{loggedInUser.email}}"
+                                              name="email">
+  </div>
+  <div class="field">
+    <label class="label">Password</label> <input class="input" type="password" placeholder="Password" name="password">
+  </div>
+  <div class="field is-grouped">
+    <button class="button is-link">Update</button>
+  </div>
+</form>
+</section>

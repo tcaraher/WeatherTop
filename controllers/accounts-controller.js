@@ -30,7 +30,6 @@ export const accountsController = {
   async register(request, response) {
     const user = request.body;
     await userStore.addUser(user);
-    console.log(`registering ${user.email}`);
     response.redirect("/");
   },
 
@@ -38,14 +37,39 @@ export const accountsController = {
     const user = await userStore.getUserByEmail(request.body.email);
     if (user) {
       response.cookie("weatherTop", user.email);
-      console.log(`logging in ${user.email}`);
       response.redirect("/dashboard");
     } else {
       response.redirect("/login");
     }
   },
 
-  // TODO change weatherTop name to station?
+  async userProfile(request, response) {
+    const loggedInUser = await accountsController.getLoggedInUser(request)
+    if (loggedInUser) {
+      const viewData = {
+        title: "User Profile",
+        loggedInUser: loggedInUser,
+      };
+      response.render('user-profile', viewData);
+    }
+    else {
+      response.redirect('/login');
+    }
+  },
+
+async updateUserProfile(request, response){
+    const loggedInUser = await accountsController.getLoggedInUser(request);
+    const updatedProfile = {
+      firstName: request.body.firstName,
+      lastName: request.body.lastName,
+      email: request.body.email,
+      password: request.body.password
+    }
+    await userStore.updateUser(loggedInUser, updatedProfile)
+    response.redirect("/user-profile")
+},
+
+
   async getLoggedInUser(request) {
     const userEmail = request.cookies.weatherTop;
     return await userStore.getUserByEmail(userEmail);
