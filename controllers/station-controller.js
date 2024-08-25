@@ -2,6 +2,7 @@ import { stationStore } from "../models/station-store.js";
 import { reportStore } from "../models/report-store.js";
 import {weatherCodeMapping} from "../utils/weather-code-mapping.js";
 import { reportAnalytics } from "../utils/reportAnalytics.js";
+import dayjs from "dayjs";
 
 export const stationController = {
   async index(request, response) {
@@ -28,7 +29,11 @@ export const stationController = {
 
   async addReport(request, response) {
     const station = await stationStore.getStationById(request.params.id);
+
+    const timestamp = dayjs()
+
     const newReport = {
+      timestamp: timestamp.format("YYYY-MM-DD HH:mm:ss"),
       weathercode: request.body.weathercode,
       weathercodedesc: weatherCodeMapping.getWeatherCodeDesc(request.body.weathercode),
       weathercodeimgurl: weatherCodeMapping.getWeatherCodeImg(request.body.weathercode),

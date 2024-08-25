@@ -2,6 +2,19 @@
   "file": "./models/reports.json",
   "reports": [
     {
+      "timestamp": "2024-08-26 00:00:15",
+      "weathercode": "502",
+      "weathercodedesc": "heavy intensity rain",
+      "weathercodeimgurl": "https://openweathermap.org/img/wn/10d@2x.png",
+      "temperature": 11,
+      "windspeed": 3,
+      "winddirection": 45,
+      "pressure": 1200,
+      "_id": "96086f03-650e-418f-a740-4447186234c1",
+      "stationid": "c0ebfab9-684d-451c-abdd-8e38d0236c4e"
+    },
+    {
+      "timestamp": "2024-08-25 12:12:15",
       "weathercode": "510",
       "weathercodedesc": null,
       "weathercodeimgurl": "https://openweathermap.org/img/wn/01d@2x.png",
@@ -13,6 +26,7 @@
       "stationid": "c0ebfab9-684d-451c-abdd-8e38d0236c4e"
     },
     {
+      "timestamp": "2024-08-25 11:00:15",
       "weathercode": "500",
       "weathercodedesc": "light rain",
       "weathercodeimgurl": "https://openweathermap.org/img/wn/10d@2x.png",
@@ -24,6 +38,7 @@
       "stationid": "c0ebfab9-684d-451c-abdd-8e38d0236c4e"
     },
     {
+      "timestamp": "2024-08-25 10:00:15",
       "weathercode": "801",
       "weathercodedesc": "few clouds",
       "weathercodeimgurl": "https://openweathermap.org/img/wn/02d@2x.png",
@@ -35,6 +50,7 @@
       "stationid": "0fa8be19-49eb-4323-b973-ca0b2f6f5a7d"
     },
     {
+      "timestamp": "2024-08-26 09:00:15",
       "weathercode": "800",
       "weathercodedesc": "clear sky",
       "weathercodeimgurl": "https://openweathermap.org/img/wn/01d@2x.png",
@@ -46,6 +62,7 @@
       "stationid": "0fa8be19-49eb-4323-b973-ca0b2f6f5a7d"
     },
     {
+      "timestamp": "2024-08-26 08:00:15",
       "weathercode": "800",
       "weathercodedesc": "clear sky",
       "weathercodeimgurl": "https://openweathermap.org/img/wn/01d@2x.png",
@@ -57,6 +74,7 @@
       "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
     },
     {
+      "timestamp": "2024-08-26 07:00:15",
       "weathercode": "804",
       "weathercodedesc": "overcast clouds",
       "weathercodeimgurl": "https://openweathermap.org/img/wn/04d@2x.png",
@@ -68,6 +86,7 @@
       "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
     },
     {
+      "timestamp": "2024-08-26 06:00:15",
       "weathercode": "801",
       "weathercodedesc": "few clouds",
       "weathercodeimgurl": "https://openweathermap.org/img/wn/02d@2x.png",
@@ -79,6 +98,7 @@
       "stationid": "e0f59799-cbff-48b8-8b07-db25431c98b8"
     },
     {
+      "timestamp": "2024-08-26 05:00:15",
       "weathercode": "202",
       "weathercodedesc": "thunderstorm with heavy rain",
       "weathercodeimgurl": "https://openweathermap.org/img/wn/11d@2x.png",
