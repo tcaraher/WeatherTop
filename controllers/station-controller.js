@@ -19,12 +19,18 @@ export const stationController = {
         maxPressure: reportAnalytics.getMax("pressure", station.reports),
         minPressure: reportAnalytics.getMin("pressure", station.reports),
       };
+
+      station.reports.forEach((report) =>{
+        report.friendlyDate = dayjs(report.timestamp).format("DD/MM/YYYY");
+        console.log(report)
+      })
     }
 
     const viewData = {
       title: "Stations",
       station: station,
     };
+
     response.render("station-view", viewData);
   },
 
@@ -41,7 +47,6 @@ export const stationController = {
       winddirection: Number(request.body.winddirection),
       pressure: Number(request.body.pressure),
     };
-    console.log(`adding report ${newReport.weathercode}`);
     await reportStore.addReport(station._id, newReport);
     response.redirect("/station/" + station._id);
   },
@@ -57,7 +62,7 @@ export const stationController = {
 
     if (result.status == 200) {
       const currentWeather = result.data;
-      newReport.timestamp = timestamp.format("YYYY-MM-DD HH:mm:ss"),
+      newReport.timestamp = timestamp.format("YYYY-MM-DD HH:mm:ss");
       newReport.weathercode = currentWeather.weather[0].id;
       newReport.weathercodedesc = weatherCodeMapping.getWeatherCodeDesc(newReport.weathercode);
       newReport.weathercodeimgurl = weatherCodeMapping.getWeatherCodeImg(newReport.weathercode);

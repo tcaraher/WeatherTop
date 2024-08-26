@@ -1,15 +1,37 @@
 {{> menu}}
-
 <section class="section">
   <div class="title">
     {{station.title}}
   </div>
-<!--  <div class="subtitle">-->
-<!--    Shortest Track: {{shortestTrack.title}}-->
-<!--  </div>-->
   {{#with station}}
   {{>station-summary}}
   {{/with}}
+  <div class="box" id="chart"></div>
+  <script>
+    const data = {
+      labels: [
+        {{#each station.reports}}
+          "{{friendlyDate}}",
+        {{/each}}
+      ],
+      datasets: [
+        {
+          name: "Temperature", type: "line",
+          values: [
+            {{#each station.reports}}
+              {{temperature}},
+            {{/each}}
+          ]
+        }
+      ]
+    };
+    new frappe.Chart("#chart", {
+      data: data,
+      type: "line",
+      height: 180,
+      colors: ["red"]
+    });
+  </script>
   {{> list-reports}}
   {{> add-report}}
 </section>
