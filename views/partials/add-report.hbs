@@ -42,9 +42,8 @@
   <button class="button is-primary">Add Report</button>
 </form>
 
-<!--TODO get a better way to do this, including on back end. Maybe just feed the data into the standard addReport method in the controller-->
 <!--  https://stackoverflow.com/questions/8398726/using-the-post-method-with-html-anchor-tags-->
-<form id="myform" method="post" action="/station/{{station._id}}/addgeneratedreport">
+<form id="generate-report-button" method="post" action="/station/{{station._id}}/addgeneratedreport">
   <input type="hidden" name="name" value="value" />
-  <a class="button has-background-danger" onclick="document.getElementById('myform').submit(); return false;">Auto Generate Report</a>
+  <a class="button has-background-danger" onclick="document.getElementById('generate-report-button').submit(); return false;">Auto Generate Report</a>
 </form>

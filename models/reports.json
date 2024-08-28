@@ -2,6 +2,18 @@
   "file": "./models/reports.json",
   "reports": [
     {
+      "timestamp": "2024-08-28 21:58:08",
+      "weathercode": "600",
+      "weathercodedesc": "light snow",
+      "weathercodeimgurl": "https://openweathermap.org/img/wn/13d@2x.png",
+      "temperature": 16,
+      "windspeed": 1,
+      "winddirection": 180,
+      "pressure": 2000,
+      "_id": "cb137ec4-6e0e-4932-b351-2ac6beaaa7fa",
+      "stationid": "0fa8be19-49eb-4323-b973-ca0b2f6f5a7d"
+    },
+    {
       "timestamp": "2024-08-26 22:30:34",
       "weathercode": "203",
       "weathercodedesc": null,
