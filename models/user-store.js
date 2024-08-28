@@ -1,16 +1,15 @@
 import { v4 } from "uuid";
 import { initStore } from "../utils/store-utils.js";
-import { request } from "express";
 
 const db = initStore("users");
 
 export const userStore = {
-  async getAllUsers() {
+  async getAllUsers () {
     await db.read();
     return db.data.users;
   },
 
-  async addUser(user) {
+  async addUser (user) {
     await db.read();
     user._id = v4();
     db.data.users.push(user);
@@ -18,7 +17,8 @@ export const userStore = {
     return user;
   },
 
-  async updateUser(loggedInUser, updatedProfile) {
+  // Checks if the user has only updated certain fields
+  async updateUser (loggedInUser, updatedProfile) {
     if (updatedProfile.firstName !== "") {
       loggedInUser.firstName = updatedProfile.firstName;
     }
@@ -29,30 +29,30 @@ export const userStore = {
       loggedInUser.email = updatedProfile.email;
     }
     if (updatedProfile.password !== "") {
-      loggedInUser.passwod = updatedProfile.password
+      loggedInUser.passwod = updatedProfile.password;
     }
     await db.write();
   },
 
-  async getUserById(id) {
+  async getUserById (id) {
     await db.read();
     return db.data.users.find((user) => user._id === id);
   },
 
-  async getUserByEmail(email) {
+  async getUserByEmail (email) {
     await db.read();
     return db.data.users.find((user) => user.email === email);
   },
 
-  async deleteUserById(id) {
+  async deleteUserById (id) {
     await db.read();
     const index = db.data.users.findIndex((user) => user._id === id);
     db.data.users.splice(index, 1);
     await db.write();
   },
 
-  async deleteAll() {
+  async deleteAll () {
     db.data.users = [];
     await db.write();
-  },
+  }
 };

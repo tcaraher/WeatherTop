@@ -1,5 +1,5 @@
 export const reportAnalytics = {
-  getMax(valueName = "", reports) {
+  getMax (valueName = "", reports) {
     let reportWithMaxValue = null;
     if (reports.length > 0) {
       reportWithMaxValue = reports[0];
@@ -11,7 +11,7 @@ export const reportAnalytics = {
     }
     return reportWithMaxValue[valueName];
   },
-  getMin(valueName = "", reports) {
+  getMin (valueName = "", reports) {
     let reportWithMinValue = null;
     if (reports.length > 0) {
       reportWithMinValue = reports[0];
@@ -22,7 +22,7 @@ export const reportAnalytics = {
       }
     }
     return reportWithMinValue[valueName];
-  },
+  }
 
-}
+};
 

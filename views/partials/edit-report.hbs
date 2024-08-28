@@ -1,23 +1,27 @@
 <form class="box" action="/station/{{station._id}}/updatereport/{{report._id}}" method="POST">
-  <label class="title">Report Details:</label>
-  <hr/>
+  <label class="title">{{title}}</label>
+  <hr />
   <div class="field is-horizontal">
     <div class="field-body">
       <div class="field">
         <label class="label">Code</label>
-        <input class="input" type="text" placeholder="{{report.weathercode}}" name="weathercode" value="{{report.weathercode}}">
+        <input class="input" type="text" placeholder="{{report.weathercode}}" name="weathercode"
+               value="{{report.weathercode}}">
       </div>
       <div class="field">
         <label class="label">Temp °C</label>
-        <input class="input" type="text" placeholder="{{report.temperature}}" name="temperature" value="{{report.temperature}}">
+        <input class="input" type="text" placeholder="{{report.temperature}}" name="temperature"
+               value="{{report.temperature}}">
       </div>
       <div class="field">
         <label class="label">Wind Speed bft</label>
-        <input class="input" type="text" placeholder="{{report.windspeed}}" name="windspeed" value="{{report.windspeed}}">
+        <input class="input" type="text" placeholder="{{report.windspeed}}" name="windspeed"
+               value="{{report.windspeed}}">
       </div>
       <div class="field">
         <label class="label">Wind Direction deg</label>
-        <input class="input" type="text" placeholder="{{report.winddirection}}" name="winddirection" value="{{report.winddirection}}">
+        <input class="input" type="text" placeholder="{{report.winddirection}}" name="winddirection"
+               value="{{report.winddirection}}">
       </div>
       <div class="field">
         <label class="label">Pressure hpa</label>

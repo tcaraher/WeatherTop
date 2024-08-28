@@ -1,4 +1,12 @@
-# WeatherTop V1
+# WeatherTop Weather Station App
 
-Tom Caraher
+A weather station and report logging full-stack web application.
 
+## Technology
+
+- Handlebars
+- NodeJS/Express
+- express-handlebars
+- Open Weather Map and API
+- [leafletJS](https://leafletjs.com/): For maps and marker insertion of station locations
+- [Frappe](https://frappe.io/): For dynamic charting of weather trends

@@ -1,21 +1,21 @@
 <div style="height: 800px" id="map"></div>
 <script>
-  const map = L.map('map')
+  const map = L.map("map");
 
   // Sets up a 'featureGroup' according to docs, in order to run getBounds function to set map view
   const markersGroup = new L.featureGroup();
 
   let marker;
     {{#each stations}}
-    marker = L.marker([{{longitude}}, {{latitude}}]).addTo(map)
+    marker = L.marker([{{longitude}}, {{latitude}}]).addTo(map);
     markersGroup.addLayer(marker);
     {{/each}}
 
   const bounds = markersGroup.getBounds();
   map.fitBounds(bounds, { maxZoom: 8 });
 
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    attribution: "&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a>"
   }).addTo(map);
 </script>

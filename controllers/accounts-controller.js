@@ -44,31 +44,29 @@ export const accountsController = {
   },
 
   async userProfile(request, response) {
-    const loggedInUser = await accountsController.getLoggedInUser(request)
+    const loggedInUser = await accountsController.getLoggedInUser(request);
     if (loggedInUser) {
       const viewData = {
         title: "User Profile",
         loggedInUser: loggedInUser,
       };
-      response.render('user-profile', viewData);
-    }
-    else {
-      response.redirect('/login');
+      response.render("user-profile", viewData);
+    } else {
+      response.redirect("/login");
     }
   },
 
-async updateUserProfile(request, response){
+  async updateUserProfile(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const updatedProfile = {
       firstName: request.body.firstName,
       lastName: request.body.lastName,
       email: request.body.email,
-      password: request.body.password
-    }
-    await userStore.updateUser(loggedInUser, updatedProfile)
-    response.redirect("/user-profile")
-},
-
+      password: request.body.password,
+    };
+    await userStore.updateUser(loggedInUser, updatedProfile);
+    response.redirect("/user-profile");
+  },
 
   async getLoggedInUser(request) {
     const userEmail = request.cookies.weatherTop;

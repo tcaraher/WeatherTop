@@ -1,8 +1,8 @@
 export const aboutController = {
-  index(request, response) {
+  index (request, response) {
     const viewData = {
-      title: "Weather Top",
+      title: "Weather Top"
     };
     response.render("about-view", viewData);
-  },
+  }
 };

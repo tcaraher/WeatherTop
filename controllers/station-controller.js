@@ -10,6 +10,7 @@ export const stationController = {
     const station = await stationStore.getStationById(request.params.id);
 
     station.recentReport = station.reports[0];
+
     if (station.reports.length > 0) {
       station.reportAnalytics = {
         maxTemp: reportAnalytics.getMax("temperature", station.reports),
@@ -20,9 +21,9 @@ export const stationController = {
         minPressure: reportAnalytics.getMin("pressure", station.reports),
       };
 
-      station.reports.forEach((report) =>{
+      station.reports.forEach((report) => {
         report.friendlyDate = dayjs(report.timestamp).format("DD/MM/YYYY");
-      })
+      });
     }
 
     const viewData = {

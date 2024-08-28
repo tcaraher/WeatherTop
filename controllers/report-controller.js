@@ -6,7 +6,7 @@ export const reportController = {
     const stationId = request.params.stationid;
     const reportId = request.params.reportid;
     const viewData = {
-      title: "Edit Song",
+      title: "Edit Report",
       station: await stationStore.getStationById(stationId),
       report: await reportStore.getReportById(reportId),
     };
@@ -22,7 +22,7 @@ export const reportController = {
       windspeed: Number(request.body.windspeed),
       winddirection: request.body.winddirection,
       pressure: request.body.pressure,
-    }
+    };
     await reportStore.updateReport(reportId, updatedReport);
     response.redirect("/station/" + stationId);
   },

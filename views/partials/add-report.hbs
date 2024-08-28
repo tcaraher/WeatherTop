@@ -1,6 +1,6 @@
 <form class="box" action="/station/{{station._id}}/addreport" method="POST">
   <label class="title">Enter Report Details:</label>
-  <hr/>
+  <hr />
   <div class="field is-horizontal">
     <div class="field-body">
       <div class="field">
@@ -45,5 +45,6 @@
 <!--  https://stackoverflow.com/questions/8398726/using-the-post-method-with-html-anchor-tags-->
 <form id="generate-report-button" method="post" action="/station/{{station._id}}/addgeneratedreport">
   <input type="hidden" name="name" value="value" />
-  <a class="button has-background-danger" onclick="document.getElementById('generate-report-button').submit(); return false;">Auto Generate Report</a>
+  <a class="button has-background-danger"
+     onclick="document.getElementById('generate-report-button').submit(); return false;">Auto Generate Report</a>
 </form>
