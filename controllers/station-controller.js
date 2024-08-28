@@ -22,7 +22,6 @@ export const stationController = {
 
       station.reports.forEach((report) =>{
         report.friendlyDate = dayjs(report.timestamp).format("DD/MM/YYYY");
-        console.log(report)
       })
     }
 
@@ -79,7 +78,6 @@ export const stationController = {
   async deleteReport(request, response) {
     const stationId = request.params.stationid;
     const reportId = request.params.reportid;
-    console.log(`Deleting Report ${reportId} from Station ${stationId}`);
     await reportStore.deleteReport(request.params.reportid);
     response.redirect("/station/" + stationId);
   },

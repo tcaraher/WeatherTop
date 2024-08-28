@@ -2,6 +2,18 @@
   "file": "./models/reports.json",
   "reports": [
     {
+      "timestamp": "2024-08-28 22:51:03",
+      "weathercode": 804,
+      "weathercodedesc": "overcast clouds",
+      "weathercodeimgurl": "https://openweathermap.org/img/wn/04d@2x.png",
+      "temperature": 25.15,
+      "winddirection": 133,
+      "windspeed": 9.97,
+      "pressure": 1014,
+      "_id": "e7abc5b8-961c-4b05-b738-391e28923a5b",
+      "stationid": "0fa8be19-49eb-4323-b973-ca0b2f6f5a7d"
+    },
+    {
       "timestamp": "2024-08-28 21:58:08",
       "weathercode": "600",
       "weathercodedesc": "light snow",

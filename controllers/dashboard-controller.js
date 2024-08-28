@@ -31,7 +31,6 @@ export const dashboardController = {
       title: "Weather Top Dashboard",
       stations: stations,
     };
-    console.log("dashboard rendering");
     response.render("dashboard-view", viewData);
   },
 
@@ -43,14 +42,12 @@ export const dashboardController = {
       latitude: request.body.latitude,
       userid: loggedInUser._id,
     };
-    console.log(`adding Station ${newStation.title}`);
     await stationStore.addStation(newStation);
     response.redirect("/dashboard");
   },
 
   async deleteStation(request, response) {
     const stationId = request.params.id;
-    console.log(`Deleting station ${stationId}`);
     await stationStore.deleteStationById(stationId);
     response.redirect("/dashboard");
   },

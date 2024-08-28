@@ -2,7 +2,7 @@
   <div class="grid">
     <div style="height:100%" class="cell box">
       <div style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
-        <h2 style="margin: auto" class="title is-5">
+        <h2 style="margin: auto" class="title is-size-5-desktop">
           {{station}}
         </h2>
         <i style="min-width: 3rem; font-size: 2rem" class="fa-solid fa-location-dot"></i>
@@ -22,7 +22,7 @@
     </div>
     <div style="height:100%" class="cell box">
       <div  style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
-        <h2 class="title is-5">Weather</h2>
+        <h2 class="title is-size-5-desktop">Weather</h2>
         <img style="max-width: 4rem" src={{recentReport.weathercodeimgurl}} />
       </div>
       <p>
@@ -34,11 +34,14 @@
     </div>
     <div style="height:100%" class="cell box">
       <div style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
-        <h2 style="margin: auto" class="title is-5">Temp</h2>
+        <h2 style="margin: auto" class="title is-size-5-desktop">Temp</h2>
         <i style="min-width: 3rem; font-size: 2rem" class="fa-solid fa-temperature-three-quarters"></i>
       </div>
       <p>
         {{recentReport.temperature}}°C
+      </p>
+      <p>
+        {{celsiusToFahrenheit recentReport.temperature}}°F
       </p>
       <p>
         Max Temp: {{reportAnalytics.maxTemp}}°C
@@ -49,7 +52,7 @@
     </div>
     <div style="height:100%" class="cell box">
       <div style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
-        <h2 style="margin: auto" class="title is-5">Wind</h2>
+        <h2 style="margin: auto" class="title is-size-5-desktop">Wind</h2>
         <i style="min-width: 3rem; font-size: 2rem" class="fa-solid fa-wind"></i>
       </div>
       <p>Wind Direction:</p>
@@ -67,7 +70,7 @@
     </div>
     <div  style="height:100%" class="cell box">
       <div style="margin-bottom: 1rem" class="is-flex is-justify-content-space-around is-align-items-center">
-        <h2 style="margin: auto" class="title is-5">Pressure</h2>
+        <h2 style="margin: auto" class="title is-size-5-desktop">Pressure</h2>
         <i style="min-width: 3rem; font-size: 2rem" class="fa-solid fa-weight-hanging"></i>
       </div>
       <p> {{recentReport.pressure}}hba
