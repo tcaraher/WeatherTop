@@ -1,13 +1,14 @@
 import { stationStore } from "../models/station-store.js";
 import { accountsController } from "./accounts-controller.js";
 import { reportAnalytics } from "../utils/reportAnalytics.js";
+import { reportStore } from "../models/report-store.js";
 
 export const dashboardController = {
   async index(request, response) {
     const loggedInUser = await accountsController.getLoggedInUser(request);
     const stations = await stationStore.getStationsByUserId(loggedInUser._id);
 
-    // creates a recent report from each stations' reports
+    // creates a recent report from each stations' reports, and sets up an analytics object to calculate the min and max of all fields.
     for (const station of stations) {
       const stationReports = await stationStore.getStationById(station._id);
       station.recentReport = stationReports.reports[0];
@@ -46,8 +47,10 @@ export const dashboardController = {
     response.redirect("/dashboard");
   },
 
+  // Deletes station and reports by station Id
   async deleteStation(request, response) {
     const stationId = request.params.id;
+    await reportStore.deleteReportsByStationId(stationId)
     await stationStore.deleteStationById(stationId);
     response.redirect("/dashboard");
   },
